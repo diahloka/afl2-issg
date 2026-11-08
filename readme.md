@@ -6,6 +6,12 @@ Student ID: 0706022410008
 **Universitas Ciputra Surabaya**  
 **Academic Year 2026/2027**
 
+> **Repository Note – Node Modules**
+>
+> The `node_modules` directories are intentionally excluded from this repository through `.gitignore`. Each Chat Application stage was developed and configured as an independent Node.js project, with its own `package.json`, `package-lock.json`, and locally installed `node_modules` directory.
+>
+> Since each stage contains its own dependencies, the `node_modules` directories would result in a large amount of duplicated files if included in the repository. Therefore, only the source code and dependency configuration files are uploaded. All dependencies can be reinstalled separately within each stage folder using `npm install`.
+
 This repository contains practical assignments and exercises for the Information Systems Security & Governance course. The assignments explore fundamental cryptographic concepts and their implementation using JavaScript and Node.js.
 
 ## Repository Structure
@@ -163,31 +169,25 @@ Each stage is organized independently and has its own dependencies.
 cd chat-application/stage-1-making-chat
 ```
 
-2. Initialize the Node.js project.
+2. Install the required dependencies using the existing `package.json`.
 
 ```bash
-npm init -y
+npm install
 ```
 
-3. Install the required Socket.IO dependencies.
-
-```bash
-npm install socket.io socket.io-client
-```
-
-4. Start the server.
+3. Start the server.
 
 ```bash
 node server.js
 ```
 
-5. Open another terminal in the same stage folder and run the client.
+4. Open another terminal in the same stage folder and run the client.
 
 ```bash
 node client.js
 ```
 
-6. Open additional terminals to connect multiple chat clients.
+5. Open additional terminals to connect multiple chat clients.
 
 **Note:** For Stage 2, `malicious-server.js` can be executed instead of `server.js` to demonstrate the behavior of a malicious chat server.
 
